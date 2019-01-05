@@ -1,5 +1,6 @@
 package net.codecision
 
+import net.codecision.designpatterns.patterns.abstractFactory.AbstractFactoryExample
 import net.codecision.designpatterns.patterns.builder.full.BuilderFullExample
 import net.codecision.designpatterns.patterns.builder.simple.BuilderSimpleExample
 import net.codecision.designpatterns.patterns.prototype.PrototypeExample
@@ -10,13 +11,23 @@ import net.codecision.utils.Pattern.*
 
 fun main(args: Array<String>) {
 
+    val patterns = arrayOf(
+        SINGLETON,
+        BUILDER_SIMPLE,
+        BUILDER_FULL,
+        PROTOTYPE,
+        ABSTRACT_FACTORY
+    )
+
+    execute(patterns)
+}
+
+private fun execute(patterns: Array<Pattern>) {
     val commands = getCommands()
 
-    commands[SINGLETON]?.execute()
-    commands[BUILDER_SIMPLE]?.execute()
-    commands[BUILDER_FULL]?.execute()
-    commands[PROTOTYPE]?.execute()
-
+    patterns.forEach {
+        commands[it]?.execute()
+    }
 }
 
 private fun getCommands(): Map<Pattern, ExampleCommand> {
@@ -24,6 +35,7 @@ private fun getCommands(): Map<Pattern, ExampleCommand> {
         SINGLETON to SingletonExample(),
         BUILDER_SIMPLE to BuilderSimpleExample(),
         BUILDER_FULL to BuilderFullExample(),
-        PROTOTYPE to PrototypeExample()
+        PROTOTYPE to PrototypeExample(),
+        ABSTRACT_FACTORY to AbstractFactoryExample()
     )
 }
