@@ -3,6 +3,7 @@ package net.codecision
 import net.codecision.designpatterns.patterns.abstractFactory.AbstractFactoryExample
 import net.codecision.designpatterns.patterns.builder.full.BuilderFullExample
 import net.codecision.designpatterns.patterns.builder.simple.BuilderSimpleExample
+import net.codecision.designpatterns.patterns.factoryMethod.FactoryMethodExample
 import net.codecision.designpatterns.patterns.prototype.PrototypeExample
 import net.codecision.designpatterns.patterns.singleton.SingletonExample
 import net.codecision.utils.ExampleCommand
@@ -16,6 +17,7 @@ fun main(args: Array<String>) {
         BUILDER_SIMPLE,
         BUILDER_FULL,
         PROTOTYPE,
+        FACTORY_METHOD,
         ABSTRACT_FACTORY
     )
 
@@ -36,6 +38,7 @@ private fun getCommands(): Map<Pattern, ExampleCommand> {
         BUILDER_SIMPLE to BuilderSimpleExample(),
         BUILDER_FULL to BuilderFullExample(),
         PROTOTYPE to PrototypeExample(),
+        FACTORY_METHOD to FactoryMethodExample(),
         ABSTRACT_FACTORY to AbstractFactoryExample()
     )
 }

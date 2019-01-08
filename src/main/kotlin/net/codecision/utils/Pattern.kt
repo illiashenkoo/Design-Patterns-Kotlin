@@ -4,5 +4,7 @@ enum class Pattern {
     SINGLETON,
     BUILDER_SIMPLE,
     BUILDER_FULL,
-    PROTOTYPE
+    PROTOTYPE,
+    FACTORY_METHOD,
+    ABSTRACT_FACTORY
 }
