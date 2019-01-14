@@ -6,5 +6,6 @@ enum class Pattern {
     BUILDER_FULL,
     PROTOTYPE,
     FACTORY_METHOD,
-    ABSTRACT_FACTORY
+    ABSTRACT_FACTORY,
+    FACADE
 }
