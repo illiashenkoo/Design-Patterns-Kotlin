@@ -7,5 +7,6 @@ enum class Pattern {
     PROTOTYPE,
     FACTORY_METHOD,
     ABSTRACT_FACTORY,
-    FACADE
+    FACADE,
+    ADAPTER
 }

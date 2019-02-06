@@ -14,12 +14,17 @@ abstract class ExampleCommand(
 
     protected abstract fun showExample()
 
+    protected fun printEmptyLine() {
+        println("")
+    }
+
     private fun printStartLine() {
         println("========== ${patternName} ==========")
     }
 
     private fun printFinishLine() {
-        println("========== /${patternName} ==========\n")
+        println("========== /${patternName} ==========")
+        printEmptyLine()
     }
 
 }
