@@ -4,6 +4,7 @@ import net.codecision.designpatterns.patterns.abstractFactory.AbstractFactoryExa
 import net.codecision.designpatterns.patterns.adapter.AdapterExample
 import net.codecision.designpatterns.patterns.builder.full.BuilderFullExample
 import net.codecision.designpatterns.patterns.builder.simple.BuilderSimpleExample
+import net.codecision.designpatterns.patterns.command.CommandExample
 import net.codecision.designpatterns.patterns.facade.FacadeExample
 import net.codecision.designpatterns.patterns.factoryMethod.FactoryMethodExample
 import net.codecision.designpatterns.patterns.prototype.PrototypeExample
@@ -15,14 +16,15 @@ import net.codecision.utils.Pattern.*
 fun main(args: Array<String>) {
 
     val patterns = arrayOf(
-//        SINGLETON,
-//        BUILDER_SIMPLE,
-//        BUILDER_FULL,
-//        PROTOTYPE,
-//        FACTORY_METHOD,
-//        ABSTRACT_FACTORY,
-//        FACADE,
-        ADAPTER
+        SINGLETON,
+        BUILDER_SIMPLE,
+        BUILDER_FULL,
+        PROTOTYPE,
+        FACTORY_METHOD,
+        ABSTRACT_FACTORY,
+        FACADE,
+        ADAPTER,
+        COMMAND
     )
 
     execute(patterns)
@@ -45,6 +47,7 @@ private fun getCommands(): Map<Pattern, ExampleCommand> {
         FACTORY_METHOD to FactoryMethodExample(),
         ABSTRACT_FACTORY to AbstractFactoryExample(),
         FACADE to FacadeExample(),
-        ADAPTER to AdapterExample()
+        ADAPTER to AdapterExample(),
+        COMMAND to CommandExample()
     )
 }

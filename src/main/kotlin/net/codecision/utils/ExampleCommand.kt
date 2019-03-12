@@ -19,11 +19,11 @@ abstract class ExampleCommand(
     }
 
     private fun printStartLine() {
-        println("========== ${patternName} ==========")
+        println("========== $patternName ==========")
     }
 
     private fun printFinishLine() {
-        println("========== /${patternName} ==========")
+        println("========== /$patternName ==========")
         printEmptyLine()
     }
 

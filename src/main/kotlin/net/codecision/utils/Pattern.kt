@@ -8,5 +8,6 @@ enum class Pattern {
     FACTORY_METHOD,
     ABSTRACT_FACTORY,
     FACADE,
-    ADAPTER
+    ADAPTER,
+    COMMAND
 }
